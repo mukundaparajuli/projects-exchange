@@ -6,6 +6,9 @@ export const CART_LOGO =
 export const SEARCH_LOGO =
   "https://static.thenounproject.com/png/856433-200.png";
 
+export const PDF_LOGO =
+  "https://cdn4.iconfinder.com/data/icons/file-extensions-1/64/pdfs-512.png";
+
 export const PROJECTS_API = [
   {
     name: "Name of the project",
@@ -13,8 +16,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -23,8 +26,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -33,8 +36,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -43,8 +46,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -53,8 +56,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -63,8 +66,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -73,8 +76,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -83,8 +86,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -93,8 +96,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -103,8 +106,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
   {
@@ -113,8 +116,8 @@ export const PROJECTS_API = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
-    subjects: "",
-    university: "",
+    subject: "Physics",
+    university: "Tribhuwan University",
     plagiarism: "true",
   },
 ];

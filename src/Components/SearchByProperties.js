@@ -1,10 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const SearchByProperties = () => {
-  const projects = useSelector((store) => store.projectsSlice);
+  // const projects = useSelector((store) => store.projectsSlice);
   return (
-    <div className="h-[100vh] inline-block shadow-lg p-4 fixed">
+    <div className="h-[100vh] inline-block fixed bg-white shadow-lg p-4  w-[20%]">
       <div>
         <h1 className="font-semibold text-xl italic text-gray-500 p-2 mx-2">
           Categories:
@@ -51,7 +51,7 @@ const SearchByProperties = () => {
           <input className="h-5 w-5" type="checkbox" name="plagiarism" />
         </li>
       </ul>
-      {console.log(projects)}
+      {/* {console.log(projects)} */}
     </div>
   );
 };
