@@ -2,7 +2,6 @@ import React from "react";
 // import { useSelector } from "react-redux";
 
 const SearchByProperties = () => {
-  // const projects = useSelector((store) => store.projectsSlice);
   return (
     <div className="h-[100vh] inline-block fixed bg-white shadow-lg p-4  w-[20%]">
       <div>

@@ -11,14 +11,14 @@ export const PDF_LOGO =
 
 export const PROJECTS_API = [
   {
-    name: "Name of the project",
+    name: "Mukunda of the project",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus cumque maxime quod ipsum recusandae? Voluptas quia sit quas provident dolorum, nobis id esse veritatis, quibusdam temporibus molestiae enim distinctio? ",
 
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -28,7 +28,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -38,7 +38,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -48,7 +48,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -58,7 +58,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -68,7 +68,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -78,7 +78,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -88,7 +88,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -98,7 +98,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -108,7 +108,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
   {
     name: "Name of the project",
@@ -118,6 +118,6 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: "true",
+    plagiarism: true,
   },
 ];
