@@ -1,7 +1,31 @@
-import React from "react";
-// import { useSelector } from "react-redux";
+import React, { useState } from "react";
+import { filterProjects } from "../Utils/helperFunctions";
+import { useDispatch, useSelector } from "react-redux";
+import { addFilteredProjects } from "../Utils/projectsSlice";
 
 const SearchByProperties = () => {
+  const projects = useSelector((store) => store.projects);
+  const filteredProjects = useSelector(
+    (store) => store.projects.filteredProjects
+  );
+  const [selectedDegree, setSelectedDegree] = useState("");
+  const [selectedUniversity, setSelectedUniversity] = useState("");
+  const [selectedSubject, setSelectedSubject] = useState("");
+
+  const dispatch = useDispatch();
+
+  const handleSelectorChange = (variable, value, name) => {
+    variable(value);
+    const newfilteredProjects = filterProjects(
+      filteredProjects,
+      value,
+      name,
+      projects
+    );
+    dispatch(addFilteredProjects(newfilteredProjects));
+    console.log(value);
+  };
+
   return (
     <div className="h-[100vh] inline-block fixed bg-white shadow-lg p-4  w-[20%]">
       <div>
@@ -14,7 +38,15 @@ const SearchByProperties = () => {
           <label className="p-2 m-2 font-semibold " htmlFor="degree">
             Degree:
           </label>
-          <select className="border-2 w-28 rounded-lg" name="degree">
+          <select
+            className="border-2 w-28 rounded-lg"
+            name="degree"
+            value={selectedDegree}
+            onChange={(e) =>
+              handleSelectorChange(setSelectedDegree, e.target.value, "degree")
+            }
+          >
+            <option value="All">All</option>
             <option value="CSE">CSE</option>
             <option value="ECE">ECE</option>
             <option value="Civil">Civil</option>
@@ -25,7 +57,19 @@ const SearchByProperties = () => {
           <label className="p-2 m-2 font-semibold" htmlFor="subject">
             Subjects:
           </label>
-          <select className="border-2 w-28 rounded-lg" name="subject">
+          <select
+            className="border-2 w-28 rounded-lg"
+            name="subject"
+            value={selectedSubject}
+            onChange={(e) =>
+              handleSelectorChange(
+                setSelectedSubject,
+                e.target.value,
+                "subject"
+              )
+            }
+          >
+            <option value="All">All</option>
             <option value="Physics">Physics</option>
             <option value="Digital Logic">Digital Logic</option>
           </select>
@@ -34,7 +78,19 @@ const SearchByProperties = () => {
           <label className="p-2 m-2 font-semibold" htmlFor="university">
             University:
           </label>
-          <select className="border-2 w-28 rounded-lg" name="university">
+          <select
+            className="border-2 w-28 rounded-lg"
+            name="university"
+            value={selectedUniversity}
+            onChange={(e) =>
+              handleSelectorChange(
+                setSelectedUniversity,
+                e.target.value,
+                "university"
+              )
+            }
+          >
+            <option value="All">All</option>
             <option value="CSE">JNU</option>
             <option value="ECE">SRM</option>
             <option value="Civil">VIT</option>

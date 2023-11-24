@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SEARCH_LOGO } from "../Utils/Constants";
 import { filterProjects } from "../Utils/helperFunctions";
 import { useDispatch, useSelector } from "react-redux";
-import { addProject } from "../Utils/projectsSlice";
+import { addFilteredProjects } from "../Utils/projectsSlice";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -16,6 +16,7 @@ const SearchBar = () => {
           className="h-16 text-white bg-gray-600 text-2xl font-semibold w-[700px] border-2 border-black outline-none border-r-0 px-4 p-2 rounded-l-full"
           type="text"
           placeholder="Search for the Project Reports...and more"
+          value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
@@ -24,7 +25,9 @@ const SearchBar = () => {
           <button
             onClick={() => {
               dispatch(
-                addProject(filterProjects(projects, searchText, "name"))
+                addFilteredProjects(
+                  filterProjects(projects, searchText, "name")
+                )
               );
             }}
           >

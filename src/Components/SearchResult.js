@@ -14,7 +14,9 @@ const SearchResult = () => {
         </div>
         <div className="w-screen flex">
           <SearchByProperties />
-          <ProjectCards />
+          <div className="w-[75%] ml-[20%]">
+            <ProjectCards />
+          </div>
         </div>
       </div>
     </div>

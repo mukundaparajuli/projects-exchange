@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Logo from "../Assets/Logo.png";
 import { CART_LOGO, PROJECTS_API, USER_LOGO } from "../Utils/Constants";
 import { useDispatch } from "react-redux";
-import { addProject } from "../Utils/projectsSlice";
+import { addFilteredProjects, addProject } from "../Utils/projectsSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -12,6 +12,7 @@ const Header = () => {
   const getProjects = () => {
     const projects = PROJECTS_API;
     dispatch(addProject(projects));
+    dispatch(addFilteredProjects(projects));
   };
   return (
     <div className="flex w-screen bg-white fixed top-0 justify-between shadow-2xl h-20 items-center">

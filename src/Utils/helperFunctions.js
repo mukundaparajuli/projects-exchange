@@ -1,7 +1,13 @@
-export const filterProjects = (projects, variable, property) => {
-  // Use filter instead of reduce for filtering the array
-  const filtered = projects.filter((project) => {
+export const filterProjects = (
+  filteredProjects,
+  variable,
+  property,
+  projects
+) => {
+  const filtered = filteredProjects.filter((project) => {
+    if (variable === "All") return projects;
     return project[property]?.toLowerCase().includes(variable.toLowerCase());
   });
+  console.log(filtered);
   return filtered;
 };
