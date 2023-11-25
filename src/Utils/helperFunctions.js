@@ -1,13 +1,12 @@
-export const filterProjects = (
-  filteredProjects,
-  variable,
-  property,
-  projects
-) => {
-  const filtered = filteredProjects.filter((project) => {
-    if (variable === "All") return projects;
-    return project[property]?.toLowerCase().includes(variable.toLowerCase());
+export const filterProjects = (projects, selectedFilters) => {
+  return projects?.filter((project) => {
+    return (
+      (selectedFilters?.degree === "All" ||
+        project?.degree === selectedFilters?.degree) &&
+      (selectedFilters?.subject === "All" ||
+        project?.subject === selectedFilters?.subject) &&
+      (selectedFilters?.university === "All" ||
+        project?.university === selectedFilters?.university)
+    );
   });
-  console.log(filtered);
-  return filtered;
 };

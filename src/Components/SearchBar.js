@@ -8,7 +8,13 @@ import { addFilteredProjects } from "../Utils/projectsSlice";
 const SearchBar = () => {
   const dispatch = useDispatch();
   const projects = useSelector((store) => store.projects.projects);
-  const [searchText, setSearchText] = useState(null);
+  const [searchText, setSearchText] = useState("");
+  const filterByName = () => {
+    const filteredByName = projects.filter((project) =>
+      project?.name?.toLowerCase().includes(searchText.toLowerCase())
+    );
+    return filteredByName;
+  };
   return (
     <div>
       <div className="flex justify-center">
@@ -24,11 +30,7 @@ const SearchBar = () => {
         <Link to="/search-result">
           <button
             onClick={() => {
-              dispatch(
-                addFilteredProjects(
-                  filterProjects(projects, searchText, "name")
-                )
-              );
+              dispatch(addFilteredProjects(filterByName(searchText)));
             }}
           >
             <img

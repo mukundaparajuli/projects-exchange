@@ -1,31 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { filterProjects } from "../Utils/helperFunctions";
 import { useDispatch, useSelector } from "react-redux";
 import { addFilteredProjects } from "../Utils/projectsSlice";
 
 const SearchByProperties = () => {
-  const projects = useSelector((store) => store.projects);
-  const filteredProjects = useSelector(
-    (store) => store.projects.filteredProjects
-  );
-  const [selectedDegree, setSelectedDegree] = useState("");
-  const [selectedUniversity, setSelectedUniversity] = useState("");
-  const [selectedSubject, setSelectedSubject] = useState("");
-
+  const projects = useSelector((store) => store.projects.projects);
+  const [selectedDegree, setSelectedDegree] = useState("All");
+  const [selectedUniversity, setSelectedUniversity] = useState("All");
+  const [selectedSubject, setSelectedSubject] = useState("All");
   const dispatch = useDispatch();
 
-  const handleSelectorChange = (variable, value, name) => {
-    variable(value);
-    const newfilteredProjects = filterProjects(
-      filteredProjects,
-      value,
-      name,
-      projects
-    );
-    dispatch(addFilteredProjects(newfilteredProjects));
-    console.log(value);
+  const handleSelectorChange = (name, value) => {
+    switch (name) {
+      case "degree":
+        setSelectedDegree(value);
+        break;
+      case "subject":
+        setSelectedSubject(value);
+        break;
+      case "university":
+        setSelectedUniversity(value);
+        break;
+      default:
+        break;
+    }
   };
 
+  useEffect(() => {
+    const selectedFilters = {
+      degree: selectedDegree,
+      subject: selectedSubject,
+      university: selectedUniversity,
+    };
+    const filteredProjects = filterProjects(projects, selectedFilters);
+    dispatch(addFilteredProjects(filteredProjects));
+  }, [selectedDegree, selectedSubject, selectedUniversity, projects, dispatch]);
+  console.log(projects);
   return (
     <div className="h-[100vh] inline-block fixed bg-white shadow-lg p-4  w-[20%]">
       <div>
@@ -42,9 +52,7 @@ const SearchByProperties = () => {
             className="border-2 w-28 rounded-lg"
             name="degree"
             value={selectedDegree}
-            onChange={(e) =>
-              handleSelectorChange(setSelectedDegree, e.target.value, "degree")
-            }
+            onChange={(e) => handleSelectorChange("degree", e.target.value)}
           >
             <option value="All">All</option>
             <option value="CSE">CSE</option>
@@ -61,13 +69,7 @@ const SearchByProperties = () => {
             className="border-2 w-28 rounded-lg"
             name="subject"
             value={selectedSubject}
-            onChange={(e) =>
-              handleSelectorChange(
-                setSelectedSubject,
-                e.target.value,
-                "subject"
-              )
-            }
+            onChange={(e) => handleSelectorChange("subject", e.target.value)}
           >
             <option value="All">All</option>
             <option value="Physics">Physics</option>
@@ -82,24 +84,18 @@ const SearchByProperties = () => {
             className="border-2 w-28 rounded-lg"
             name="university"
             value={selectedUniversity}
-            onChange={(e) =>
-              handleSelectorChange(
-                setSelectedUniversity,
-                e.target.value,
-                "university"
-              )
-            }
+            onChange={(e) => handleSelectorChange("university", e.target.value)}
           >
             <option value="All">All</option>
-            <option value="CSE">JNU</option>
-            <option value="ECE">SRM</option>
-            <option value="Civil">VIT</option>
+            <option value="JNU">JNU</option>
+            <option value="SRM">SRM</option>
+            <option value="VIT">VIT</option>
           </select>
         </li>
         <li className="my-4">
           <label
             className="p-2 m-2 w-16 font-semibold"
-            htmlFor="plagarism-free"
+            htmlFor="plagiarism-free"
           >
             Plagiarism Free:
           </label>

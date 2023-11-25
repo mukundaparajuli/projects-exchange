@@ -33,6 +33,9 @@ const ProjectsDetail = () => {
                 Subject: {project.subject}
               </p>
               <p className="font-semibold text-2xl m-4 ">
+                Degree: {project.degree}
+              </p>
+              <p className="font-semibold text-2xl m-4 ">
                 University: {project.university}
               </p>
               <p className="font-semibold text-2xl m-4 ">
@@ -52,7 +55,6 @@ const ProjectsDetail = () => {
           )}
         </div>
       </div>
-        
     </div>
   );
 };

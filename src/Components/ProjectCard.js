@@ -1,6 +1,5 @@
 import React from "react";
 import { PDF_LOGO } from "../Utils/Constants";
-
 const ProjectCard = ({ name, degree, subject, university }) => {
   return (
     <div className="h-64 w-56 shadow-xl m-2 p-4 cursor-pointer">
