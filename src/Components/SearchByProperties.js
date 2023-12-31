@@ -5,9 +5,15 @@ import { addFilteredProjects } from "../Utils/projectsSlice";
 
 const SearchByProperties = () => {
   const projects = useSelector((store) => store.projects.projects);
+  const filteredProjects = useSelector(
+    (state) => state.projects.filteredProjects
+  );
+  console.log(filteredProjects);
+
   const [selectedDegree, setSelectedDegree] = useState("All");
   const [selectedUniversity, setSelectedUniversity] = useState("All");
   const [selectedSubject, setSelectedSubject] = useState("All");
+  const [plagiarismFree, setPlagiarismFree] = useState(true);
   const dispatch = useDispatch();
 
   const handleSelectorChange = (name, value) => {
@@ -31,13 +37,22 @@ const SearchByProperties = () => {
       degree: selectedDegree,
       subject: selectedSubject,
       university: selectedUniversity,
+      plagiarism: plagiarismFree,
     };
-    const filteredProjects = filterProjects(projects, selectedFilters);
+
+    const filteredProjects = filterProjects(selectedFilters, projects);
     dispatch(addFilteredProjects(filteredProjects));
-  }, [selectedDegree, selectedSubject, selectedUniversity, projects, dispatch]);
-  console.log(projects);
+  }, [
+    selectedDegree,
+    selectedSubject,
+    selectedUniversity,
+    plagiarismFree,
+    dispatch,
+    projects,
+  ]);
+
   return (
-    <div className="h-[100vh] inline-block fixed bg-white shadow-lg p-4  w-[20%]">
+    <div className="h-[100vh] inline-block fixed bg-white shadow-lg p-4 w-[20%]">
       <div>
         <h1 className="font-semibold text-xl italic text-gray-500 p-2 mx-2">
           Categories:
@@ -99,10 +114,16 @@ const SearchByProperties = () => {
           >
             Plagiarism Free:
           </label>
-          <input className="h-5 w-5" type="checkbox" name="plagiarism" />
+          <input
+            className="h-5 w-5"
+            type="checkbox"
+            name="plagiarism"
+            value={plagiarismFree}
+            defaultChecked
+            onChange={() => setPlagiarismFree(!plagiarismFree)}
+          />
         </li>
       </ul>
-      {/* {console.log(projects)} */}
     </div>
   );
 };

@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SEARCH_LOGO } from "../Utils/Constants";
-import { filterProjects } from "../Utils/helperFunctions";
 import { useDispatch, useSelector } from "react-redux";
 import { addFilteredProjects } from "../Utils/projectsSlice";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
   const projects = useSelector((store) => store.projects.projects);
+  // console.log(projects);
+  const filteredProjects = useSelector(
+    (store) => store.projects.filteredProjects
+  );
   const [searchText, setSearchText] = useState("");
-  const filterByName = () => {
-    const filteredByName = projects.filter((project) =>
-      project?.name?.toLowerCase().includes(searchText.toLowerCase())
-    );
-    return filteredByName;
+
+  const handleSearchClick = () => {
+    const filteredResult = filterByName(searchText);
+    dispatch(addFilteredProjects(filteredResult));
+  };
+
+  const filterByName = (searchText) => {
+    if (searchText === "") {
+      return filteredProjects; // If search text is empty, return previous filtered projects
+    } else {
+      const filteredByName = projects.filter((project) =>
+        project.name.toLowerCase().includes(searchText.toLowerCase())
+      );
+      return filteredByName;
+    }
   };
   return (
     <div>
@@ -28,11 +41,7 @@ const SearchBar = () => {
           }}
         />
         <Link to="/search-result">
-          <button
-            onClick={() => {
-              dispatch(addFilteredProjects(filterByName(searchText)));
-            }}
-          >
+          <button onClick={handleSearchClick}>
             <img
               className="h-16 p-3 rounded-r-full border-2 border-black bg-gray-600"
               src={SEARCH_LOGO}

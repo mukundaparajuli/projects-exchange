@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
@@ -7,14 +8,12 @@ const ProjectCards = () => {
     (state) => state.projects.filteredProjects
   );
 
-  // console.log();
+  console.log(filteredProjects);
 
   return (
-    <div className=" flex flex-wrap justify-evenly mt-8 p-4 ">
-      {!filteredProjects ? (
-        <div>Loading...</div>
-      ) : (
-        filteredProjects?.map((project) => (
+    <div className="flex flex-wrap justify-evenly mt-8 p-4">
+      {filteredProjects && filteredProjects.length > 0 ? (
+        filteredProjects.map((project) => (
           <Link
             to={"/project-details/" + project.projectId}
             key={project.projectId}
@@ -22,6 +21,8 @@ const ProjectCards = () => {
             <ProjectCard {...project} />
           </Link>
         ))
+      ) : (
+        <div>Loading...</div>
       )}
     </div>
   );

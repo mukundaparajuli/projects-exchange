@@ -18,7 +18,7 @@ export const PROJECTS_API = [
     degree: "ECE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: true,
+    plagiarism: false,
     projectId: "1",
   },
   {
@@ -51,7 +51,7 @@ export const PROJECTS_API = [
     degree: "CSE",
     subject: "Physics",
     university: "Tribhuwan University",
-    plagiarism: true,
+    plagiarism: false,
     projectId: "4",
   },
   {
