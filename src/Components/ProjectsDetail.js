@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { PDF_LOGO } from "../Utils/Constants";
 import useProjectDetails from "../hooks/useProjectDetails";
 import ProjectCards from "./ProjectCards";
@@ -13,7 +13,9 @@ const ProjectsDetail = () => {
     <div>
       <div className="mt-24 m-4 flex border p-8 justify-center">
         <div className="w-[30%] self-center">
-          <img className="w-full h-96 " src={PDF_LOGO} alt="" />
+          <Link to={`/project-details/view-pdf/${projectId}`}>
+            <img className="w-full h-96 " src={PDF_LOGO} alt="" />
+          </Link>
           <div className="flex justify-evenly w-full">
             <button className="border border-black rounded-lg m-2 p-2 w-32 font-bold bg-orange-300">
               Add to Cart

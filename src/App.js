@@ -4,8 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchResult from "./Components/SearchResult";
 import { Provider } from "react-redux";
 import appStore from "./Utils/appStore";
-import ProjectsDetail from "./Components/ProjectsDetail";
+// import ProjectsDetail from "./Components/ProjectsDetail";
 import ProjectsDetailPage from "./Components/ProjectsDetailPage";
+import ViewProject from "./Components/ViewProject";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -20,6 +21,10 @@ function App() {
     {
       path: "/project-details/:projectId",
       element: <ProjectsDetailPage />,
+    },
+    {
+      path: "/project-details/view-pdf/:projectId",
+      element: <ViewProject />,
     },
   ]);
   return (
