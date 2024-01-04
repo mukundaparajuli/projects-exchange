@@ -8,8 +8,6 @@ import useProjectDetails from "../hooks/useProjectDetails";
 const ViewProject = () => {
   const { projectId } = useParams();
   const project = useProjectDetails(projectId);
-  console.log(project);
-  const pdfURL = "https://www.africau.edu/images/default/sample.pdf";
 
   return (
     project && (
@@ -22,7 +20,7 @@ const ViewProject = () => {
         </div>
         <div className="flex justify-center items-center">
           <iframe
-            src={pdfURL}
+            src={project.pdfURL}
             frameborder="0"
             className="h-[100vh] w-[100vh]"
           ></iframe>

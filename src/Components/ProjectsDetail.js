@@ -2,12 +2,17 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { PDF_LOGO } from "../Utils/Constants";
 import useProjectDetails from "../hooks/useProjectDetails";
-import ProjectCards from "./ProjectCards";
+import { useDispatch } from "react-redux";
+import { addCart } from "../Utils/projectsSlice";
 
 const ProjectsDetail = () => {
+  const dispatch = useDispatch();
   const { projectId } = useParams();
-  // console.log(typeof projectId);
   const project = useProjectDetails(projectId);
+  const handleCartClick = (cartedProject) => {
+    dispatch(addCart(cartedProject));
+    console.log(cartedProject);
+  };
 
   return (
     <div>
@@ -17,7 +22,10 @@ const ProjectsDetail = () => {
             <img className="w-full h-96 " src={PDF_LOGO} alt="" />
           </Link>
           <div className="flex justify-evenly w-full">
-            <button className="border border-black rounded-lg m-2 p-2 w-32 font-bold bg-orange-300">
+            <button
+              className="border border-black rounded-lg m-2 p-2 w-32 font-bold bg-orange-300"
+              onClick={() => handleCartClick(project)}
+            >
               Add to Cart
             </button>
             <button className="border border-black rounded-lg m-2 p-2 w-32 font-bold bg-green-300">

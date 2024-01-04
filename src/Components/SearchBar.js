@@ -7,7 +7,6 @@ import { addFilteredProjects } from "../Utils/projectsSlice";
 const SearchBar = () => {
   const dispatch = useDispatch();
   const projects = useSelector((store) => store.projects.projects);
-  // console.log(projects);
   const filteredProjects = useSelector(
     (store) => store.projects.filteredProjects
   );
@@ -41,7 +40,7 @@ const SearchBar = () => {
           }}
         />
         <Link to="/search-result">
-          <button onClick={handleSearchClick}>
+          <button onClick={()=>handleSearchClick()}>
             <img
               className="h-16 p-3 rounded-r-full border-2 border-black bg-gray-600"
               src={SEARCH_LOGO}

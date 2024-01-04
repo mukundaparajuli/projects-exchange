@@ -8,8 +8,6 @@ const ProjectCards = () => {
     (state) => state.projects.filteredProjects
   );
 
-  console.log(filteredProjects);
-
   return (
     <div className="flex flex-wrap justify-evenly mt-8 p-4">
       {filteredProjects && filteredProjects.length > 0 ? (

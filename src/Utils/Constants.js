@@ -20,6 +20,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: false,
     projectId: "1",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -31,6 +32,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "2",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -42,6 +44,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "3",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -53,6 +56,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: false,
     projectId: "4",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -64,6 +68,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "5",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -75,6 +80,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "6",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -86,6 +92,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "7",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -97,6 +104,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "8",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -108,6 +116,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "9",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -119,6 +128,7 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "10",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
   {
     name: "Name of the project",
@@ -130,5 +140,6 @@ export const PROJECTS_API = [
     university: "Tribhuwan University",
     plagiarism: true,
     projectId: "11",
+    pdfURL: "https://www.africau.edu/images/default/sample.pdf",
   },
 ];

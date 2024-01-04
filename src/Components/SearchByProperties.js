@@ -8,7 +8,7 @@ const SearchByProperties = () => {
   const filteredProjects = useSelector(
     (state) => state.projects.filteredProjects
   );
-  console.log(filteredProjects);
+
 
   const [selectedDegree, setSelectedDegree] = useState("All");
   const [selectedUniversity, setSelectedUniversity] = useState("All");

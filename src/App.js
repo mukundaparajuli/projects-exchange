@@ -7,12 +7,17 @@ import appStore from "./Utils/appStore";
 // import ProjectsDetail from "./Components/ProjectsDetail";
 import ProjectsDetailPage from "./Components/ProjectsDetailPage";
 import ViewProject from "./Components/ViewProject";
+import Cart from "./Components/Cart";
 
 function App() {
   const appRouter = createBrowserRouter([
     {
       path: "/",
       element: <Body />,
+    },
+    {
+      path: "/cart",
+      element: <Cart />,
     },
     {
       path: "/search-result",

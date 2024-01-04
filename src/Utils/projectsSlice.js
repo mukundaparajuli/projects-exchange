@@ -5,6 +5,7 @@ const projectSlice = createSlice({
   initialState: {
     projects: null,
     filteredProjects: null,
+    cartProjects: [],
   },
   reducers: {
     addProject: (state, action) => {
@@ -13,7 +14,11 @@ const projectSlice = createSlice({
     addFilteredProjects: (state, action) => {
       state.filteredProjects = action.payload;
     },
+    addCart: (state, action) => {
+      state.cartProjects.push(action.payload);
+    },
   },
 });
 export default projectSlice.reducer;
-export const { addProject, addFilteredProjects } = projectSlice.actions;
+export const { addProject, addFilteredProjects, addCart } =
+  projectSlice.actions;
