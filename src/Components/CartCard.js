@@ -21,7 +21,7 @@ const CartCard = (project) => {
           Buy Now
         </button>
         <button className="border-2 border-black rounded-md bg-red-600 m-2 font-bold text-white p-1 shadow-red-400 w-40">
-          Add to Cart
+          Remove
         </button>
       </div>
     </div>

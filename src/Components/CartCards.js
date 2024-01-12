@@ -3,7 +3,6 @@ import CartCard from "./CartCard";
 import { useSelector } from "react-redux";
 
 const CartCards = () => {
-  // const cartItems = useSelector((store) => store.projects.cartProjects) || [];
   const cartItems = useSelector((state) => state.projects.cartProjects);
   return (
     <div className=" flex justify-center items-center">
