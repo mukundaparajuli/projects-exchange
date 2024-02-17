@@ -9,7 +9,7 @@ import ProjectsDetailPage from "./Components/ProjectsDetailPage";
 import ViewProject from "./Components/ViewProject";
 import Cart from "./Components/Cart";
 import SignUp from "./Components/SignUp";
-import SignIn from "./Components/SignIn";
+// import SignIn from "./Components/SignIn";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -37,10 +37,10 @@ function App() {
       path: "/signup",
       element: <SignUp />,
     },
-    {
-      path: "/login",
-      element: <SignIn />,
-    },
+    // {
+    //   path: "/login",
+    //   element: <SignIn />,
+    // },
   ]);
   return (
     <div className="App">
